@@ -1,0 +1,111 @@
+%%%%%%
+% Beginning of file sample.tex 
+%
+% Acta Spartae Sample File
+% Ethan Deneault September 2016
+%
+%%%%%%
+
+% The following commands load the class file and the hyperlink reference package. 
+
+\documentclass[final]{actaspartae}
+\usepackage{hyperref}
+
+% Do not edit this. This is for publication information
+
+\begin{document}
+\pubmonth{September}
+\pubyear{2018}
+\volume{4}
+\issue{1}
+\setcounter{page}{3}
+\firstpage{\thestartpage}
+\lastpage{\getpagerefnumber{bottom}}
+
+
+% License codes are for the author to license their work via one of the creative commons licenses or by a generic license. 
+%
+% acta - Generic license
+% by - CC License Attribution
+% by-sa - CC License Attribution-Share-Alike
+% by-nc-sa - CC License Attribution-Noncommercial-ShareAlike
+% zero - Public Domain Dedication 
+
+\license{acta}
+
+% Comment out \raggedend if you want to balance out the columns on the last page. 
+
+%\raggedend
+
+% Title and subject information goes here
+
+\subjectarea{Science} 
+
+\title[This is a short title]{This is the full title of the article}
+
+\author[1]{Bob Student}
+\author[2]{Jane Student}
+\author[2,3]{Faculty Person}
+
+\affil[1]{Department of Something} 
+\affil[2]{Department of Something Else, University of Tampa, Tampa, FL 33606} 
+\affil[3]{Faculty Advisor}
+
+% This makes the title block. 
+
+\maketitle
+
+% This is your abstract. 
+
+\begin{abstract}
+This abstract is super exciting! I did some science and it was fun. I got some results. If you read my paper, It'll tell you all about it. 
+\end{abstract}
+
+% Use the \section{} command to start a section. If there are subsections, use \subsection{}. 
+% Use \citet{} and \citep{} for citations in text and in parentheses, respectively. 
+
+\section{Introduction}Science. It is what happens in a laboratory. The best kind of science references papers that other people did. \citet{carrier70} say that we should look at bacteria, because they are cool, but I think they aren't as cool as toxicology \citep{downs16}. 
+
+\section{Materials and Methods}I used some stuff. Science stuff. \subsection{More information about x, y and z}
+
+A wild table appears: 
+
+\begin{table}[th!]
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}{l >{\centering\arraybackslash}p{7em}}
+\multicolumn{1}{c}{\textbf{Species}} & \multicolumn{1}{c}{\textbf{MLD}} \\
+\toprule\emph{Escherichia coli} & \SI{40}{\second}\\\emph{Micrococcus luteus} & \SI{120}{\second}\\\emph{Micrococcus radiophilus} & \SI{240}{\second}\\
+\botrule
+\end{tabular}
+\caption{Determined MLD of E. coli, M. luteus, and M. radiophilus. The Micrococcus species   have a substantially higher MLD when compared to E. coli. Signifies the sensitivity of E. coli when exposed alone to UV radiation. }
+\label{tab:bugs}  %% Label your tables for referencing your tables!
+\end{table}
+See, you can reference table \ref{tab:bugs} easily using \verb+\label{}+. 
+
+
+\section{Results}
+
+I got results. 
+
+\section{Discussion/Conclusion}
+
+Revel in my scientific prowess. \acknowledgements
+
+I'd like to thank the academy and NSF for all the grant monies. 
+
+% References must be in the format shown below. Note spaces (or lack of spaces) carefully! 
+% \bibitem[authornames(year)]lastname, A. B. year \href{DOI number}{Journal abbreviated Name and Pages}
+% Journal abbreviations can be found here: https://library.caltech.edu/reference/abbreviations/
+
+\begin{thebibliography}{99}
+\bibitem[Carrier \& Setlow(1970)]{carrier70}Carrier, W. L. \& Setlow, R. B. 1970. \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC284985/}{J Bacteriol, 102:178--186}
+
+\bibitem[Downs et al.(2016)]{downs16}Downs, C.A., Kramarsky-Winter, E., Segal, R. et al. \href{http://dx.doi.org/10.1007/s00244-015-0227-7}{Arch Environ Contam Toxicol 70: 265}
+
+\end{thebibliography}
+
+
+
+\label{bottom}
+\end{document}
