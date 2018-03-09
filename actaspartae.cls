@@ -39,7 +39,7 @@
 \DeclareOption{final}{\@finaltrue}
 \DeclareOption{preprint}{\@finalfalse}
 
-%\ExecuteOptions{a4paper,crop,centre,info}
+\ExecuteOptions{letterpaper, pdf, final}
 
 \ProcessOptions
 
